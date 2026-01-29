@@ -13,7 +13,7 @@ body {
 }
 
 .container{
-    width: 1280px;
+    width: 1380px;
     margin: auto;
     z-index: 1;
 }
@@ -64,7 +64,7 @@ body {
     justify-content: flex-end;
 }
 .main-head .main-menu .nav-menu .nav-list .nav-list-item{
-    padding: 15px 30px;
+    padding: 20px 35px;
     list-style: none;
 }
 .main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
