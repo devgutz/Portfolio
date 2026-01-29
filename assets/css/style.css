@@ -17,7 +17,7 @@
 }
 
 /*Header - Navbar Config*/
-.main-head-navbar{
+#main-head-navbar{
     width: 100%;
     height: 54px;
     position: absolute;
@@ -26,7 +26,7 @@
     background: transparent;
     z-index: 9999;
 }
-.main-head-navbar.slidedown{
+#main-head-navbar.slidedown{
     position: fixed;
     background: #0B0E14;
     animation: slidedown .3s forwards;
