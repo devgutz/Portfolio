@@ -1,0 +1,91 @@
+/*Fonte para outros textos*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Fonte para Títulos/Marca*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/*Configurações Gerais*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 1280px;
+    margin: auto;
+    z-index: 1;
+}
+
+/*Header - Navbar Config*/
+.main-head-navbar{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 9999;
+}
+.main-head-navbar.slidedown{
+    position: fixed;
+    background: #0B0E14;
+    animation: slidedown .3s forwards;
+}
+
+@keyframes slidedown{
+    from{
+        top: -250px;
+    }
+    to{
+        top: 0;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+.main-head-navbar .main-menu-navbar{
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-head-navbar .main-menu-navbar .logo-navbar{
+    width: 30%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+.main-head-navbar .main-menu-navbar .nav-menu-navbar{
+    width: 70%;
+}
+.main-head-navbar .main-menu-navbar .nav-menu-navbar .nav-list-navbar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-head-navbar .main-menu-navbar .nav-menu-navbar .nav-list-navbar .nav-list-item-navbar{
+    padding: 15px 30px;
+    list-style: none;
+}
+.main-head-navbar .main-menu-navbar .nav-menu-navbar .nav-list-navbar .nav-list-item-navbar .nav-link-navbar{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    font-weight: 500;
+    transition: all .1s ease;
+}
+.main-head-navbar.slidedown .main-menu-navbar .nav-menu-navbar .nav-list-navbar .nav-list-item-navbar .nav-link-navbar {
+    color: #000;
+}
+.main-head-navbar .main-menu-navbar .nav-menu-navbar .nav-list-navbar .nav-list-item-navbar .nav-link-.nav-link-navbar{
+    color: #B53471;
+}
+.main-head-navbar.slidedown .main-menu-navbar .logo{
+    color: #000;
+}
+.main-head.navbar .main-menu.navbar .toggle-btn-navbar{
+    display: none;
+}
