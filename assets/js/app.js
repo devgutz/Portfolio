@@ -91,3 +91,163 @@
                 });
             });
         });
+
+
+        //Área de About Me: 
+        // Efeito de digitação em LOOP contínuo com velocidades ajustadas
+        const typewriterText = document.getElementById('typewriter');
+        const speedButtons = document.querySelectorAll('.speed-btn');
+        
+        const professions = [
+            "Desenvolvedor Web",
+            "Suporte Técnico", 
+            "Área de Dados"
+        ];
+        
+        // Configurações de velocidade
+        const speedSettings = {
+            slow: {
+                write: 120,    // ms por caractere ao escrever
+                delete: 60,    // ms por caractere ao apagar
+                pauseWrite: 2000, // ms de pausa após escrever
+                pauseDelete: 800  // ms de pausa após apagar
+            },
+            normal: {
+                write: 80,     // ms por caractere ao escrever
+                delete: 40,    // ms por caractere ao apagar
+                pauseWrite: 1500, // ms de pausa após escrever
+                pauseDelete: 500  // ms de pausa após apagar
+            },
+            fast: {
+                write: 50,     // ms por caractere ao escrever
+                delete: 25,    // ms por caractere ao apagar
+                pauseWrite: 1000, // ms de pausa após escrever
+                pauseDelete: 300  // ms de pausa após apagar
+            }
+        };
+        
+        // Velocidade atual (normal por padrão)
+        let currentSpeed = 'normal';
+        let typewriterInterval;
+        
+        function startTypewriter() {
+            let textIndex = 0;
+            let charIndex = 0;
+            let isErasing = false;
+            
+            function type() {
+                const currentText = professions[textIndex];
+                const speed = speedSettings[currentSpeed];
+                
+                if (!isErasing) {
+                    // Escrevendo
+                    typewriterText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    
+                    if (charIndex === currentText.length) {
+                        // Terminou de escrever, espera e começa a apagar
+                        setTimeout(() => {
+                            isErasing = true;
+                            type();
+                        }, speed.pauseWrite);
+                        return;
+                    }
+                } else {
+                    // Apagando
+                    typewriterText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    
+                    if (charIndex === 0) {
+                        // Terminou de apagar, vai para o próximo texto
+                        isErasing = false;
+                        textIndex = (textIndex + 1) % professions.length;
+                        
+                        // Pequena pausa antes de começar o próximo
+                        setTimeout(() => {
+                            type();
+                        }, speed.pauseDelete);
+                        return;
+                    }
+                }
+                
+                // Velocidade atual baseada na ação
+                const currentSpeedValue = isErasing ? speed.delete : speed.write;
+                typewriterInterval = setTimeout(type, currentSpeedValue);
+            }
+            
+            // Inicia o loop
+            type();
+        }
+        
+        // Controladores de velocidade
+        function setSpeed(speed) {
+            currentSpeed = speed;
+            
+            // Atualiza botões ativos
+            speedButtons.forEach(btn => {
+                if (btn.dataset.speed === speed) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Reinicia o typewriter com nova velocidade
+            clearTimeout(typewriterInterval);
+            typewriterText.textContent = '';
+            startTypewriter();
+        }
+        
+        // Event listeners para os botões de velocidade
+        speedButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                setSpeed(btn.dataset.speed);
+            });
+        });
+        
+        // Inicia o typewriter quando a página carrega
+        document.addEventListener('DOMContentLoaded', () => {
+            startTypewriter();
+        });
+        
+        // Função alternativa mais simples (caso precise)
+        function simpleTypewriter() {
+            const texts = professions;
+            let i = 0;
+            let j = 0;
+            let isDeleting = false;
+            let currentText = '';
+            
+            function type() {
+                const speed = speedSettings[currentSpeed];
+                
+                if (isDeleting) {
+                    currentText = texts[i].substring(0, j - 1);
+                    j--;
+                    typewriterText.textContent = currentText;
+                    
+                    if (j === 0) {
+                        isDeleting = false;
+                        i = (i + 1) % texts.length;
+                        setTimeout(type, speed.pauseDelete);
+                        return;
+                    }
+                    
+                    setTimeout(type, speed.delete);
+                } else {
+                    currentText = texts[i].substring(0, j + 1);
+                    j++;
+                    typewriterText.textContent = currentText;
+                    
+                    if (j === texts[i].length) {
+                        isDeleting = true;
+                        setTimeout(type, speed.pauseWrite);
+                        return;
+                    }
+                    
+                    setTimeout(type, speed.write);
+                }
+            }
+            
+            type();
+        }
