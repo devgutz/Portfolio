@@ -35,7 +35,7 @@
         
         .main-head.slidedown{
             position: fixed;
-            background: #fff;
+            background: #0B0E14;
             margin-top: 0;
             animation: slidedown .3s forwards;
         }
@@ -116,7 +116,7 @@
         }
         
         .main-head.slidedown .main-menu .nav-menu .nav-list .nav-list-item .nav-link {
-            color: #000;
+            color: #ffffff;
         }
         
         .main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link:hover{
@@ -224,7 +224,7 @@
             }
             
             .main-head.slidedown .main-menu .nav-menu {
-                background: rgba(255, 255, 255, 0.95);
+                background: rgba(0, 0, 0, 0.95);
             }
             
             .main-head .main-menu .nav-menu.active {
@@ -342,5 +342,346 @@
             .hamburger-btn {
                 width: 24px;
                 height: 16px;
+            }
+        }
+
+        /*SOBRE MIM*/
+        .about-container {
+            display: flex;
+            max-width: 1300px;
+            width: 100%;
+            background-color: #0e121b;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+        
+        .photo-column {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        
+        .photo-frame {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid #3498db;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-frame:hover {
+            transform: scale(1.03);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .info-column {
+            flex: 1.2;
+            min-width: 350px;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .greeting {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            font-family: "Space Grotesk", sans-serif;
+        }
+        
+        .name-highlight {
+            color: #3498db;
+            position: relative;
+            display: inline-block;
+            font-family: "Space Grotesk", sans-serif;
+        }
+        
+        .name-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #3498db;
+            opacity: 0.3;
+        }
+        
+        .typewriter-container {
+            height: 60px;
+            margin: 20px 0 30px 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffffff;
+            position: relative;
+        }
+        
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 3px solid #3498db;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            animation: blink-caret 0.75s step-end infinite;
+            font-family: "Space Grotesk", sans-serif;
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #3498db; }
+        }
+        
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #f0f4f8;
+            border-radius: 50%;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .profession-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        
+        .tag {
+            background-color: #e8f4fc;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #d1e8ff;
+        }
+        
+        /* BREAKPOINT 1024px - Tablets grandes / Laptops pequenos */
+        @media (max-width: 1024px) {
+            .about-container {
+                max-width: 900px;
+                margin-top: 100px;
+            }
+            
+            .greeting {
+                font-size: 2.5rem;
+            }
+            
+            .typewriter-container {
+                font-size: 1.6rem;
+                height: 55px;
+            }
+            
+            .photo-frame {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        
+        /* BREAKPOINT 768px - Tablets */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                max-width: 600px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+            
+            .photo-column, .info-column {
+                width: 100%;
+                min-width: unset;
+            }
+            
+            .photo-column {
+                padding: 30px;
+            }
+            
+            .info-column {
+                padding: 40px 30px;
+            }
+            
+            .greeting {
+                font-size: 2.3rem;
+                text-align: center;
+            }
+            
+            .typewriter-container {
+                font-size: 1.5rem;
+                height: 50px;
+                text-align: center;
+            }
+            
+            .about-text {
+                text-align: center;
+            }
+            
+            .profession-tags {
+                justify-content: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .photo-frame {
+                width: 220px;
+                height: 220px;
+            }
+        }
+        
+        /* BREAKPOINT 480px - Celulares grandes */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .about-container {
+                border-radius: 12px;
+                margin-top: 100px;
+            }
+            
+            .photo-column {
+                padding: 25px;
+            }
+            
+            .info-column {
+                padding: 30px 25px;
+            }
+            
+            .greeting {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .typewriter-container {
+                font-size: 1.3rem;
+                height: 45px;
+                margin: 15px 0 20px 0;
+            }
+            
+            .about-text {
+                font-size: 1.05rem;
+                line-height: 1.5;
+            }
+            
+            .photo-frame {
+                width: 200px;
+                height: 200px;
+                border-width: 6px;
+            }
+            
+            .social-icons a {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .tag {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* BREAKPOINT 360px - Celulares pequenos */
+        @media (max-width: 360px) {
+            body {
+                padding: 10px;
+            }
+            
+            .about-container {
+                border-radius: 10px;
+                margin-top: 100px;
+            }
+            
+            .photo-column {
+                padding: 20px;
+            }
+            
+            .info-column {
+                padding: 25px 20px;
+            }
+            
+            .greeting {
+                font-size: 1.8rem;
+            }
+            
+            .typewriter-container {
+                font-size: 1.9rem;
+                height: 40px;
+                margin: 12px 0 18px 0;
+            }
+            
+            .about-text {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            
+            .photo-frame {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .social-icons {
+                gap: 10px;
+            }
+            
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+            
+            .profession-tags {
+                gap: 8px;
+            }
+            
+            .tag {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+            
+            .name-highlight::after {
+                bottom: 3px;
+                height: 2px;
             }
         }
