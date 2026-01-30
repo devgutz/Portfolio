@@ -1,91 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+        
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+        body {
+            background-color: #0B0E14;
+            min-height: 200vh; /* Para testar o scroll */
+        }
 
-body {
-    background-color: #0B0E14;
-}
-
-.container{
-    width: 1380px;
-    margin: auto;
-    z-index: 1;
-}
-.main-head{
-    width: 100%;
-    height: 75px;
-    margin-top: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    z-index: 9999;
-}
-.main-head.slidedown{
-    position: fixed;
-    background: #fff;
-    animation: slidedown .3s forwards;
-}
-@keyframes slidedown{
-    from{
-        top: -250px;
-    }
-    to{
-        top: 0;
-        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-}
-.main-head .main-menu{
-    width: 100%;
-    height: 54px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.main-head .main-menu .logo{
-    width: 30%;
-     font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: #fff;
-}
-.main-head .main-menu .nav-menu{
-    width: 70%;
-}
-.main-head .main-menu .nav-menu .nav-list{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-.main-head .main-menu .nav-menu .nav-list .nav-list-item{
-    padding: 20px 35px;
-    list-style: none;
-}
-.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    font-family: "Inter", sans-serif;
-    line-height: 20px;
-    font-weight: 500;
-    transition: all .1s ease;
-}
-.main-head.slidedown .main-menu .nav-menu .nav-list .nav-list-item .nav-link {
-    color: #000;
-}
-.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link:hover{
-    color: #4DA3FF;
-}
-.main-head.slidedown .main-menu .logo{
-    color: #000;
-}
-.main-head .main-menu .toggle-btn{
-    display: none;
-}
+        .container{
+            max-width: 1380px;
+            width: 100%;
+            margin: auto;
+            padding: 0 20px;
+            z-index: 1;
+        }
+        
+        .main-head{
+            width: 100%;
+            height: 75px;
+            margin-top: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+        
+        .main-head.slidedown{
+            position: fixed;
+            background: #fff;
+            margin-top: 0;
+            animation: slidedown .3s forwards;
+        }
+        
+        @keyframes slidedown{
+            from{
+                top: -250px;
+            }
+            to{
+                top: 0;
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        .main-head .main-menu{
+            width: 100%;
+            height: 54px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .main-head .main-menu .logo{
+            width: 30%;
+            font-family: "Inter", sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .main-head .main-menu .logo img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .main-head .main-menu .nav-menu{
+            width: 70%;
+        }
+        
+        .main-head .main-menu .nav-menu .nav-list{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .main-head .main-menu .nav-menu .nav-list .nav-list-item{
+            padding: 20px 25px;
+            list-style: none;
+        }
+        
+        .main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            font-family: "Inter", sans-serif;
+            line-height: 20px;
+            font-weight: 500;
+            transition: all .1s ease;
+            white-space: nowrap;
+        }
+        
+        .main-head.slidedown .main-menu .nav-menu .nav-list .nav-list-item .nav-link {
+            color: #000;
+        }
+        
+        .main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link:hover{
+            color: #4DA3FF;
+        }
+        
+        .main-head.slidedown .main-menu .logo{
+            color: #000;
+        }
+        
+        .main-head .main-menu .toggle-btn{
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            padding: 5px;
+        }
+        
+        .main-head.slidedown .main-menu .toggle-btn {
+            color: #000;
+        }
+        
+        /* Media Queries para Responsividade */
+        
+        /* Tablets (até 1024px) */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .main-head .main-menu .nav-menu .nav-list .nav-list-item {
+                padding: 20px 15px;
+            }
+        }
+        
+        /* Tablets pequenos e grandes celulares (até 768px) */
+        @media (max-width: 768px) {
+            .main-head .main-menu .nav-menu {
+                display: none;
+                position: fixed;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #0B0E14;
+                padding: 20px 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 9998;
+            }
+            
+            .main-head.slidedown .main-menu .nav-menu {
+                background: #fff;
+                top: 55px;
+            }
+            
+            .main-head .main-menu .nav-menu.active {
+                display: block;
+            }
+            
+            .main-head .main-menu .nav-menu .nav-list {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+            }
+            
+            .main-head .main-menu .nav-menu .nav-list .nav-list-item {
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link {
+                font-size: 16px;
+                padding: 10px 0;
+                width: 100%;
+            }
+            
+            .main-head .main-menu .toggle-btn {
+                display: block;
+            }
+            
+            .main-head .main-menu .logo {
+                width: 70%;
+            }
+            
+            .main-head .main-menu .logo img {
+                max-width: 250px;
+            }
+        }
+        
+        /* Celulares (até 480px) */
+        @media (max-width: 480px) {
+            .main-head {
+                height: 65px;
+                margin-top: 10px;
+            }
+            
+            .main-head.slidedown {
+                height: 55px;
+            }
+            
+            .main-head .main-menu .logo img {
+                max-width: 200px;
+            }
+            
+            .main-head .main-menu .nav-menu {
+                top: 65px;
+            }
+            
+            .main-head.slidedown .main-menu .nav-menu {
+                top: 55px;
+            }
+        }
+        
+        /* Celulares muito pequenos (até 360px) */
+        @media (max-width: 360px) {
+            .main-head .main-menu .logo img {
+                max-width: 180px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
