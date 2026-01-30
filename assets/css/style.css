@@ -186,11 +186,11 @@
         }
         
         .main-head.slidedown .hamburger-line {
-            background-color: #000;
+            background-color: #ffffff;
         }
         
         .main-head.slidedown .hamburger-btn.active .hamburger-line {
-            background-color: #000;
+            background-color: #ffffff;
         }
         
         /* Media Queries para Responsividade */
