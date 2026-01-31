@@ -8,10 +8,47 @@
         }
 
         body {
-            background-color: #0B0E14;
-            min-height: 200vh;
-            font-family: "Inter", sans-serif;
+        min-height: 100vh;
+            /* Gradiente com as duas cores especificadas */
+            background: linear-gradient(45deg, 
+                #0e121b 0%, 
+                #162b55  25%, 
+                #0e121b 50%, 
+                #162b55 75%, 
+                #0e121b 100%);
+            background-size: 400% 400%;
+            
+            /* Animação para movimento suave */
+            animation: gradientMove 25s ease infinite;
+            
+            /* Melhorar aparência do texto */
+            color: #e0e0e0;
+            font-family: 'Inter';
+
+            /* Suavizar bordas do gradiente */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        /* Animação do gradiente */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 50% 50%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 50% 50%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
 
         .container{
             max-width: 1380px;
@@ -720,7 +757,7 @@
         
         .skills-section-title p {
             font-size: 1.1rem;
-            color: #64748b;
+            color: #ffffff;
             max-width: 700px;
             margin: 0 auto;
         }
