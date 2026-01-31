@@ -639,3 +639,38 @@
                 autoSlideInterval = setInterval(nextSlide, 8000);
             });
         });
+
+        //SECTION - EXPERIENCIA PROFIOSSIONAL
+        // Animação de aparecimento com scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const experienciaContainers = document.querySelectorAll('.experiencia-container');
+            
+            // Função para verificar se um elemento está visível na tela
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            // Função para verificar e aplicar animação aos elementos visíveis
+            function checkVisibility() {
+                experienciaContainers.forEach(container => {
+                    if (isElementInViewport(container)) {
+                        container.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Verificar visibilidade ao carregar a página
+            checkVisibility();
+            
+            // Verificar visibilidade ao rolar a página
+            window.addEventListener('scroll', checkVisibility);
+            
+            // Adicionar classe de animação com delay para criar efeito sequencial
+            experienciaContainers.forEach((container, index) => {
+                container.style.transitionDelay = `${index * 0.2}s`;
+            });
+        });
