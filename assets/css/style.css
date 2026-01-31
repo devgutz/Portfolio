@@ -752,7 +752,7 @@
         
         .skill-service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
         }
         
         .skill-card-image {
