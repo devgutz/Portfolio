@@ -26,10 +26,10 @@
                             <a href="#" class="nav-link">Início</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="#" class="nav-link">Sobre Mim</a>
+                            <a href="#about-me" class="nav-link">Sobre Mim</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="#" class="nav-link">Habilidades e Serviços</a>
+                            <a href="#skills-and-services" class="nav-link">Habilidades e Serviços</a>
                         </li>
                         <li class="nav-list-item">
                             <a href="#" class="nav-link">Projetos</a>
@@ -68,7 +68,7 @@
                 <img src="assets/img/image-gutz.jpeg" alt="Gustavo Rodrigues">
             </div>
         </div>
-        
+        <a id="about-me"></a>
         <div class="info-column">
             <h1 class="greeting">Sou o <span class="name-highlight">Gustavo Rodrigues</span>,</h1>
             
@@ -90,6 +90,48 @@
                 <a href="www.linkedin.com/in/devgutz" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/devgutz" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:devgutz.contato@gmail.com" title="E-mail"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+
+    </section>
+        <section>
+            <a id="skills-and-services"></a>
+            <section class="skills-section-container">
+            <div class="skills-section-title">
+                <h2>Habilidades & Serviços</h2>
+                <p>Confira os principais serviços que ofereço e as tecnologias utilizadas em cada um deles. Clique em qualquer card para obter mais detalhes.</p>
+            </div>
+            
+            <div class="skills-slider-container">
+                <div class="skills-slider-track" id="skillsSliderTrack">
+                    <!-- Cards serão gerados via JavaScript -->
+                </div>
+                
+                <div class="skills-slider-controls">
+                    <button class="skills-slider-btn" id="skillsPrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="skills-slider-dots" id="skillsSliderDots">
+                        <!-- Os dots serão gerados via JavaScript -->
+                    </div>
+                    
+                    <button class="skills-slider-btn" id="skillsNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal para visualização detalhada -->
+        <div class="skill-modal-overlay" id="skillModalOverlay">
+            <div class="skill-modal-content">
+                <button class="skill-modal-close" id="skillModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="skill-modal-body" id="skillModalBody">
+                    <!-- Conteúdo do modal será preenchido via JavaScript -->
+                </div>
             </div>
         </div>
     </section>
