@@ -278,6 +278,14 @@
                 longDescription: "Ofereço soluções completas em dados, desde análise descritiva e dashboards estratégicos até a construção de modelos preditivos e pipelines de dados escaláveis. Utilizo as melhores práticas de engenharia e ciência de dados para garantir qualidade, confiabilidade e clareza nas entregas. Meu processo envolve entendimento do problema de negócio, coleta e preparação dos dados, análise exploratória, modelagem (quando aplicável) e comunicação clara dos insights através de visualizações e relatórios. Trabalho de forma estruturada para garantir que cada solução entregue valor tangível, dentro do prazo e dos objetivos estabelecidos.",
                 image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 tags: ["PHP", "MYSQL", "Python"]
+            },
+            {
+                id: 4,
+                name: "Gerenciamento de Equipes",
+                description: "Liderança e coordenação de pessoas para alcançar objetivos comuns, focando no desenvolvimento do time, na produtividade e na entrega de resultados dentro de prazos e recursos estabelecidos.",
+                longDescription: "Ofereço soluções completas em gestão de equipes, desde a formação e estruturação de times até a liderança de squads multidisciplinares de alta performance. Utilizo as melhores práticas de gestão ágil e liderança servidora para garantir produtividade, engajamento e entrega de valor contínuo. Meu processo inclui análise de necessidades do negócio, definição de papéis e responsabilidades, mentoria e desenvolvimento de talentos, coordenação de rotinas ágeis e medição de resultados. Trabalho com metodologias como Scrum e Kanban para garantir que os times operem com foco, transparência e melhoria constante, sempre alinhados aos prazos e objetivos estratégicos da organização.",
+                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1184&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                tags: ["Metodologias Ágeis", "Comunicação", "Empatia","Gestão de Tempo","Gestão de Projetos"]
             }
         ];
 
