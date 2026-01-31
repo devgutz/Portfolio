@@ -515,3 +515,127 @@
 
         // Inicializar quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', initSkillsSlider);
+
+        //PROJECTS SECTION
+         document.addEventListener('DOMContentLoaded', function() {
+            // Elementos do slider
+            const sliderContainer = document.querySelector('.slider-container');
+            const projectCards = document.querySelectorAll('.project-card');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const currentSlideSpan = document.getElementById('current-slide');
+            const totalSlidesSpan = document.getElementById('total-slides');
+            const sliderDotsContainer = document.getElementById('slider-dots');
+            
+            // Configurações
+            let currentSlide = 0;
+            const totalSlides = projectCards.length;
+            
+            // Atualizar contador total
+            totalSlidesSpan.textContent = totalSlides;
+            
+            // Criar dots do slider
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (i === 0) dot.classList.add('active');
+                
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                });
+                
+                sliderDotsContainer.appendChild(dot);
+            }
+            
+            // Função para atualizar o slider
+            function updateSlider() {
+                // Calcular o deslocamento
+                const offset = -currentSlide * 100;
+                sliderContainer.style.transform = `translateX(${offset}%)`;
+                
+                // Atualizar contador
+                currentSlideSpan.textContent = currentSlide + 1;
+                
+                // Atualizar dots
+                const dots = document.querySelectorAll('.slider-dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Ir para slide específico
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                updateSlider();
+            }
+            
+            // Próximo slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            // Slide anterior
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            // Event listeners para os botões
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Navegação por teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+            
+            // Suporte a touch para dispositivos móveis
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            sliderContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            sliderContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe para a esquerda -> próximo slide
+                        nextSlide();
+                    } else {
+                        // Swipe para a direita -> slide anterior
+                        prevSlide();
+                    }
+                }
+            }
+            
+            // Inicializar slider
+            updateSlider();
+            
+            // Auto-slide a cada 8 segundos
+            let autoSlideInterval = setInterval(nextSlide, 8000);
+            
+            // Pausar auto-slide ao interagir
+            const sliderControls = document.querySelector('.projects-slider');
+            sliderControls.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            sliderControls.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(nextSlide, 8000);
+            });
+        });
