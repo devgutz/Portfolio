@@ -780,7 +780,7 @@
         
         .skill-card-title {
             font-size: 1.5rem;
-            color: #2563eb;
+            color: #3498db;
             margin-bottom: 15px;
             font-weight: 700;
             font-family: "Space Grotesk", sans-serif;
@@ -817,7 +817,7 @@
         }
         
         .skills-slider-btn {
-            background-color: #2563eb;
+            background-color: #3498db;
             color: white;
             border: none;
             width: 50px;
@@ -833,7 +833,7 @@
         }
         
         .skills-slider-btn:hover {
-            background-color: #1d4ed8;
+            background-color: #3498db;
             transform: scale(1.05);
         }
         
@@ -852,7 +852,7 @@
         }
         
         .skills-slider-dot.active {
-            background-color: #2563eb;
+            background-color: #3498db;
         }
         
         /* Responsivo */
@@ -980,7 +980,7 @@
         
         .skill-modal-close:hover {
             background-color: #e2e8f0;
-            color: #2563eb;
+            color: #3498db;
         }
         
         .skill-modal-body {
@@ -1003,8 +1003,9 @@
         
         .skill-modal-title {
             font-size: 2rem;
-            color: #2563eb;
+            color: #3498db;
             margin-bottom: 20px;
+            font-family: "Space Grotesk", sans-serif;
         }
         
         .skill-modal-description {
@@ -1021,7 +1022,7 @@
         }
         
         .skill-modal-tag {
-            background-color: #2563eb;
+            background-color: #3498db;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
