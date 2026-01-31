@@ -296,6 +296,14 @@
                 longDescription: "Ofereço soluções completas em dados, desde análise descritiva e dashboards estratégicos até a construção de modelos preditivos e pipelines de dados escaláveis. Utilizo as melhores práticas de engenharia e ciência de dados para garantir qualidade, confiabilidade e clareza nas entregas. Meu processo envolve entendimento do problema de negócio, coleta e preparação dos dados, análise exploratória, modelagem (quando aplicável) e comunicação clara dos insights através de visualizações e relatórios. Trabalho de forma estruturada para garantir que cada solução entregue valor tangível, dentro do prazo e dos objetivos estabelecidos.",
                 image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 tags: ["PHP", "MYSQL", "Python"]
+            },
+            {
+                id: 6,
+                name: "Revisão e Versionamento do Código",
+                description: "Revisão de erros, bugs e problemas do código, visando evitar um problema maior no código principal, junto ao versionamamento, onde criamos cópias do software para que o principal seja mudado apenas quando tudo estiver funcionando.",
+                longDescription: "Ofereço soluções completas em dados, desde análise descritiva e dashboards estratégicos até a construção de modelos preditivos e pipelines de dados escaláveis. Utilizo as melhores práticas de engenharia e ciência de dados para garantir qualidade, confiabilidade e clareza nas entregas. Meu processo envolve entendimento do problema de negócio, coleta e preparação dos dados, análise exploratória, modelagem (quando aplicável) e comunicação clara dos insights através de visualizações e relatórios. Trabalho de forma estruturada para garantir que cada solução entregue valor tangível, dentro do prazo e dos objetivos estabelecidos.",
+                image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                tags: ["Git", "GitHub"]
             }
         ];
 
