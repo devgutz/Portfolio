@@ -1175,6 +1175,7 @@
             background-color: #0e121b;
             border-radius: 16px;
             overflow: hidden;
+            
         }
         
         /* Breakpoint 768px - Layout de duas colunas */
@@ -1868,5 +1869,163 @@
             .experiencia-data {
                 font-size: 0.8rem;
                 padding: 4px 12px;
+            }
+        }
+
+        /*SEÇÃO - FORMAÇÃO ACADEMICA*/
+        .academic-section {
+            padding: 40px 20px;
+            background-color: #0e121b;
+            min-height: 50vh;
+            border-radius: 15px;
+        }
+
+        .academic-title {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .academic-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        .academic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .academic-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .academic-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .academic-institution {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .academic-course {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .academic-period {
+            color: #7f8c8d;
+            font-size: 1rem;
+            padding: 8px 16px;
+            background: #f1f8ff;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        /* Breakpoint 1024px */
+        @media (max-width: 1024px) {
+            .academic-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .academic-section {
+                padding: 50px 20px;
+            }
+        }
+
+        /* Breakpoint 768px */
+        @media (max-width: 768px) {
+            .academic-cards {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+                gap: 20px;
+            }
+            
+            .academic-title {
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+            }
+            
+            .academic-card {
+                padding: 25px;
+            }
+        }
+
+        /* Breakpoint 480px */
+        @media (max-width: 480px) {
+            .academic-section {
+                padding: 40px 15px;
+            }
+            
+            .academic-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .academic-institution {
+                font-size: 1.2rem;
+            }
+            
+            .academic-course {
+                font-size: 1.1rem;
+            }
+            
+            .academic-card {
+                padding: 20px;
+            }
+        }
+
+        /* Breakpoint 360px */
+        @media (max-width: 360px) {
+            .academic-section {
+                padding: 30px 10px;
+            }
+            
+            .academic-title {
+                font-size: 1.6rem;
+            }
+            
+            .academic-institution {
+                font-size: 1.1rem;
+            }
+            
+            .academic-course {
+                font-size: 1rem;
+            }
+            
+            .academic-period {
+                font-size: 0.9rem;
             }
         }
