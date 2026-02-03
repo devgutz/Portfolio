@@ -309,7 +309,88 @@
         </div>
     </section>
 
-    
+    <section class="contact-section">
+        <h2 class="contact-me-title">CONTATO</h2>
+        <p class="contact-me-subtitle">Entre em contato comigo através do formulário abaixo ou usando as informações de contato fornecidas. Responderei o mais breve possível.</p>
+        
+        <div class="contact-me-container">
+            <div class="contact-me-info">
+                <div class="contact-me-card">
+                    <div class="contact-me-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-me-details">
+                        <h3>Localização</h3>
+                        <p>São Paulo, Brasil</p>
+                    </div>
+                </div>
+                
+                <div class="contact-me-card">
+                    <div class="contact-me-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-me-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-me-card">
+                    <div class="contact-me-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-me-details">
+                        <h3>Telefone</h3>
+                        <p><a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-me-social">
+                    <a href="#" class="contact-me-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="contact-me-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="contact-me-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="contact-me-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-me-form">
+                <form id="contact-me-form" action="https://formspree.io/f/mrelvobj" method="POST">
+                    <div class="contact-me-form-group">
+                        <label for="contact-me-name" class="contact-me-label">Nome Completo</label>
+                        <input type="text" id="contact-me-name" name="name" class="contact-me-input" placeholder="Digite seu nome" required>
+                    </div>
+                    
+                    <div class="contact-me-form-group">
+                        <label for="contact-me-email" class="contact-me-label">Email</label>
+                        <input type="email" id="contact-me-email" name="email" class="contact-me-input" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    
+                    <div class="contact-me-form-group">
+                        <label for="contact-me-subject" class="contact-me-label">Assunto</label>
+                        <input type="text" id="contact-me-subject" name="subject" class="contact-me-input" placeholder="Assunto da mensagem" required>
+                    </div>
+                    
+                    <div class="contact-me-form-group">
+                        <label for="contact-me-message" class="contact-me-label">Mensagem</label>
+                        <textarea id="contact-me-message" name="message" class="contact-me-textarea" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="contact-me-button">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                    
+                    <div id="contact-me-message" class="contact-me-message"></div>
+                </form>
+            </div>
+        </div>
 
     </main>
 

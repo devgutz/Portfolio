@@ -676,4 +676,86 @@
         });
 
         //CONTACT
-        
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-me-form');
+            const messageDiv = document.getElementById('contact-me-message');
+            
+            // Remover a mensagem de status após alguns segundos
+            function clearMessage() {
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                    messageDiv.className = 'contact-me-message';
+                }, 5000);
+            }
+            
+            // Envio do formulário
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Coletar dados do formulário
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                
+                // Validação básica
+                if (!data.name || !data.email || !data.subject || !data.message) {
+                    messageDiv.textContent = 'Por favor, preencha todos os campos.';
+                    messageDiv.className = 'contact-me-message error';
+                    messageDiv.style.display = 'block';
+                    clearMessage();
+                    return;
+                }
+                
+                // Simular envio (substitua por chamada real à API)
+                // Em um caso real, você enviaria para o Formspree ou outro serviço
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                
+                // Mostrar estado de carregamento
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                submitButton.disabled = true;
+                
+                // Simular delay de rede
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Simular resposta de sucesso
+                const isSuccess = Math.random() > 0.1; // 90% de chance de sucesso para demonstração
+                
+                if (isSuccess) {
+                    messageDiv.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                    messageDiv.className = 'contact-me-message success';
+                    messageDiv.style.display = 'block';
+                    
+                    // Limpar formulário
+                    form.reset();
+                } else {
+                    messageDiv.textContent = 'Erro ao enviar mensagem. Tente novamente mais tarde.';
+                    messageDiv.className = 'contact-me-message error';
+                    messageDiv.style.display = 'block';
+                }
+                
+                // Restaurar botão
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                
+                // Limpar mensagem após alguns segundos
+                clearMessage();
+            });
+            
+            // Validação em tempo real
+            const inputs = form.querySelectorAll('.contact-me-input, .contact-me-textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value.trim() === '') {
+                        this.style.borderColor = '#e74c3c';
+                    } else {
+                        this.style.borderColor = '#e0e0e0';
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.value.trim() !== '') {
+                        this.style.borderColor = '#3498db';
+                    }
+                });
+            });
+        });
