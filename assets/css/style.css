@@ -2029,3 +2029,282 @@
                 font-size: 0.9rem;
             }
         }
+    
+        /*CONTATO*/
+        .contact-me-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo do cabeçalho da seção */
+        .contact-me-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .contact-me-header h2 {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 10px;
+            padding-top: 40px;
+        }
+
+        .contact-me-header p {
+            font-size: 1.1rem;
+            color: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Layout principal */
+        .contact-me-content {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Informações de contato */
+        .contact-me-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            background: linear-gradient(135deg, #3498db 0%, #5498c5 100%);
+            color: white;
+        }
+
+        .contact-me-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-me-info h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Formulário de contato */
+        .contact-me-form-container {
+            flex: 1.5;
+            min-width: 300px;
+            padding: 40px;
+        }
+
+        .contact-me-form h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-me-form h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #4a6ee0;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 3px rgba(74, 110, 224, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Botão de envio */
+        .contact-me-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #4a6ee0, #3498db);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 110, 224, 0.3);
+        }
+
+        .contact-me-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 110, 224, 0.4);
+        }
+
+        .contact-me-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .contact-me-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Mensagem de confirmação */
+        .contact-me-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+
+        .contact-me-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .contact-me-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        /* Responsividade */
+        /* Breakpoint para tablets (1024px) */
+        @media (max-width: 1024px) {
+            .contact-me-content {
+                flex-direction: column;
+            }
+            
+            .contact-me-info, .contact-me-form-container {
+                width: 100%;
+            }
+        }
+
+        /* Breakpoint para tablets menores (768px) */
+        @media (max-width: 768px) {
+            .contact-me-header h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-me-info, .contact-me-form-container {
+                padding: 30px;
+            }
+            
+            .contact-detail-item {
+                flex-direction: column;
+            }
+            
+            .contact-detail-icon {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Breakpoint para celulares (480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .contact-me-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-me-header p {
+                font-size: 1rem;
+            }
+            
+            .contact-me-info, .contact-me-form-container {
+                padding: 25px 20px;
+            }
+            
+            .contact-me-info h3, .contact-me-form h3 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-me-btn {
+                padding: 14px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Breakpoint para celulares pequenos (360px) */
+        @media (max-width: 360px) {
+            .contact-me-header h2 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-me-info, .contact-me-form-container {
+                padding: 20px 15px;
+            }
+            
+            .contact-detail-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }

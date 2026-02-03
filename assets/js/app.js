@@ -675,4 +675,84 @@
             });
         });
 
-        
+        //CONTACT
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-me-form');
+            const messageDiv = document.getElementById('contact-me-message');
+            
+            // Destinatário fixo do e-mail
+            const recipientEmail = 'devgutz.contato@gmail.com';
+            
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Obter valores do formulário
+                const name = document.getElementById('contact-me-name').value.trim();
+                const email = document.getElementById('contact-me-email').value.trim();
+                const subject = document.getElementById('contact-me-subject').value.trim();
+                const message = document.getElementById('contact-me-message').value.trim();
+                
+                // Validação simples
+                if (!name || !email || !subject || !message) {
+                    showMessage('Por favor, preencha todos os campos.', 'error');
+                    return;
+                }
+                
+                // Validar formato de e-mail
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showMessage('Por favor, insira um endereço de e-mail válido.', 'error');
+                    return;
+                }
+                
+                // Criar o link para o cliente de e-mail
+                const emailBody = `Olá,\n\nEsta mensagem foi enviada através do formulário de contato:\n\nNome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}\n\nAtenciosamente,\n${name}`;
+                
+                // Codificar os dados para URL
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedBody = encodeURIComponent(emailBody);
+                
+                // Criar o link mailto
+                const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+                
+                // Tentar abrir o cliente de e-mail
+                window.location.href = mailtoLink;
+                
+                // Mostrar mensagem de sucesso
+                showMessage('Abrindo seu cliente de e-mail. Por favor, clique em enviar para completar o processo.', 'success');
+                
+                // Limpar o formulário após alguns segundos
+                setTimeout(() => {
+                    contactForm.reset();
+                    messageDiv.style.display = 'none';
+                }, 5000);
+            });
+            
+            // Função para mostrar mensagens
+            function showMessage(text, type) {
+                messageDiv.textContent = text;
+                messageDiv.className = `contact-me-message ${type}`;
+                messageDiv.style.display = 'block';
+                
+                // Rolar até a mensagem se necessário
+                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            
+            // Adicionar validação em tempo real para os campos
+            const formInputs = contactForm.querySelectorAll('.form-control');
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    // Remover mensagens de erro quando o usuário começar a digitar
+                    if (messageDiv.style.display === 'block') {
+                        messageDiv.style.display = 'none';
+                    }
+                    
+                    // Adicionar/remover classe de validação
+                    if (this.value.trim() === '') {
+                        this.classList.add('invalid');
+                    } else {
+                        this.classList.remove('invalid');
+                    }
+                });
+            });
+        });
