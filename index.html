@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Dev Gutz - Página Inicial</title>
     
-    <!-- CORRIGIDO: Barras normais -->
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Portfólio de Gustavo Rodrigues - Desenvolvedor Web e Profissional de TI">
+    <meta name="keywords" content="desenvolvedor, portfolio, HTML, CSS, JavaScript, suporte técnico">
+    <meta name="author" content="Gustavo Rodrigues">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS principal -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--Elementos da Navbar-->
+    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>
@@ -20,10 +28,10 @@
                 <div class="logo">
                     <img src="assets/img/logo-devgutz.png" alt="DevGutz Logo">
                 </div>
-                <div class="nav-menu">
+                <nav aria-label="Menu principal" class="nav-menu">
                     <ul class="nav-list">
                         <li class="nav-list-item">
-                            <a href="index.html" class="nav-link">Início</a>
+                            <a href="#inicio" class="nav-link">Início</a>
                         </li>
                         <li class="nav-list-item">
                             <a href="#about-me" class="nav-link">Sobre Mim</a>
@@ -38,15 +46,15 @@
                             <a href="#experiencia-profissional" class="nav-link">Experiência</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="#" class="nav-link">Formação</a>
+                            <a href="#formacao" class="nav-link">Formação</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="#" class="nav-link">Contato</a>
+                            <a href="#contato" class="nav-link">Contato</a>
                         </li>
                     </ul>
-                </div>
+                </nav>
                 <div class="toggle-btn">
-                    <button class="hamburger-btn" id="menuToggle">
+                    <button class="hamburger-btn" id="menuToggle" aria-label="Menu mobile">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
@@ -57,46 +65,47 @@
     </header>
 
     <main>
-        
-    <section class="container about-container">
-        <div class="photo-column">
-            <div class="photo-frame">
-                <!-- Imagem de perfil placeholder - substitua pelo caminho da sua foto -->
-                <img src="assets/img/image-gutz.jpeg" alt="Gustavo Rodrigues">
+        <!-- Seção Sobre Mim -->
+        <section class="container about-container" id="inicio">
+            <div class="photo-column">
+                <div class="photo-frame">
+                    <img src="assets/img/image-gutz.jpeg" alt="Gustavo Rodrigues - Desenvolvedor">
+                </div>
             </div>
-        </div>
-        <a id="about-me"></a>
-        <div class="info-column">
-            <h1 class="greeting">Sou o <span class="name-highlight">Gustavo Rodrigues</span>,</h1>
-            
-            <div class="typewriter-container">
-                <span id="typewriter" class="typewriter-text"></span>
-            </div>
-            <p class="about-text">
-                Sou desenvolvedor em constante evolução, apaixonado por tecnologia, inovação e resolução de problemas. Tenho experiência em desenvolvimento web, lógica de programação e suporte em TI, sempre focado em aprender, evoluir e entregar soluções eficientes. Atualmente migrando para área de dados. 
+            <div class="info-column">
+                <h1 class="greeting">Sou o <span class="name-highlight">Gustavo Rodrigues</span>,</h1>
                 
-            </p>
-            
-            <div class="profession-tags">
-                <span class="tag">Desenvolvimento Web</span>
-                <span class="tag">Suporte Técnico</span>
-                <span class="tag">Gerenciamento De Equipes</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">Análise de Dados</span>
+                <div class="typewriter-container">
+                    <span id="typewriter" class="typewriter-text"></span>
+                </div>
+                <p class="about-text">
+                    Sou desenvolvedor em constante evolução, apaixonado por tecnologia, inovação e resolução de problemas. Tenho experiência em desenvolvimento web, lógica de programação e suporte em TI, sempre focado em aprender, evoluir e entregar soluções eficientes. Atualmente migrando para área de dados.
+                </p>
+                
+                <div class="profession-tags">
+                    <span class="tag">Desenvolvimento Web</span>
+                    <span class="tag">Suporte Técnico</span>
+                    <span class="tag">Gerenciamento De Equipes</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">Análise de Dados</span>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/devgutz" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/devgutz" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:devgutz.contato@gmail.com" title="E-mail">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-            
-            <div class="social-icons">
-                <a href="www.linkedin.com/in/devgutz" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/devgutz" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:devgutz.contato@gmail.com" title="E-mail"><i class="far fa-envelope"></i></a>
-            </div>
-        </div>
+        </section>
 
-    </section>
-
-    <section>
-            <a id="skills-and-services"></a>
-            <section class="skills-section-container">
+        <!-- Seção Habilidades e Serviços -->
+        <section id="skills-and-services" class="skills-section-container">
             <div class="skills-section-title">
                 <h2>Habilidades & Serviços</h2>
                 <p>Confira os principais serviços que ofereço e as tecnologias utilizadas em cada um deles. Clique em qualquer card para obter mais detalhes.</p>
@@ -108,7 +117,7 @@
                 </div>
                 
                 <div class="skills-slider-controls">
-                    <button class="skills-slider-btn" id="skillsPrevBtn">
+                    <button class="skills-slider-btn" id="skillsPrevBtn" aria-label="Slide anterior">
                         <i class="fas fa-chevron-left"></i>
                     </button>
                     
@@ -116,7 +125,7 @@
                         <!-- Os dots serão gerados via JavaScript -->
                     </div>
                     
-                    <button class="skills-slider-btn" id="skillsNextBtn">
+                    <button class="skills-slider-btn" id="skillsNextBtn" aria-label="Próximo slide">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
@@ -126,7 +135,7 @@
         <!-- Modal para visualização detalhada -->
         <div class="skill-modal-overlay" id="skillModalOverlay">
             <div class="skill-modal-content">
-                <button class="skill-modal-close" id="skillModalClose">
+                <button class="skill-modal-close" id="skillModalClose" aria-label="Fechar modal">
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="skill-modal-body" id="skillModalBody">
@@ -134,76 +143,76 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="container projects-section" id="projects" style="background-color: #0e121b; border-radius: 16px;">
-        <h2 class="projects-title">Projetos & Trabalhos</h2>
-        <a id="projects"></a>
-        <p class="projects-description">Confira alguns dos projetos que desenvolvi, combinando tecnologia, design e funcionalidade para criar soluções inovadoras.</p>
-        <p class="projects-description">*Ainda estou desenvolvendo projetos.*</p>
-        
-        <div class="projects-slider">
-            <div class="slider-container">
-                <!-- Projeto 1 -->
-                <div class="project-card" id="project-1">
-                    <div class="project-image-col">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="E-commerce Platform" class="project-image">
-                        <div class="image-gradient"></div>
+        <!-- Seção Projetos -->
+        <section class="container projects-section" id="projects">
+            <h2 class="projects-title">Projetos & Trabalhos</h2>
+            <p class="projects-description">Confira alguns dos projetos que desenvolvi, combinando tecnologia, design e funcionalidade para criar soluções inovadoras.</p>
+            <p class="projects-description">*Ainda estou desenvolvendo projetos.*</p>
+            
+            <div class="projects-slider">
+                <div class="slider-container">
+                    <!-- Projeto 1 -->
+                    <div class="project-card" id="project-1">
+                        <div class="project-image-col">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="E-commerce Platform" class="project-image">
+                            <div class="image-gradient"></div>
+                        </div>
+                        <div class="project-content-col">
+                            <h3 class="project-title">Projeto 1</h3>
+                            <p class="project-description">Em desenvolvimento.</p>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
                     </div>
-                    <div class="project-content-col">
-                        <h3 class="project-title">Projeto 1</h3>
-                        <p class="project-description">Em desenvolvimento.</p>
-                        <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+                    
+                    <!-- Projeto 2 -->
+                    <div class="project-card" id="project-2">
+                        <div class="project-image-col">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Data Analytics Dashboard" class="project-image">
+                            <div class="image-gradient"></div>
+                        </div>
+                        <div class="project-content-col">
+                            <h3 class="project-title">Projeto 2</h3>
+                            <p class="project-description">Em desenvolvimento.</p>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
                     </div>
+                    
+                    <!-- Projeto 3 -->
+                    <div class="project-card" id="project-3">
+                        <div class="project-image-col">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Mobile Fitness App" class="project-image">
+                            <div class="image-gradient"></div>
+                        </div>
+                        <div class="project-content-col">
+                            <h3 class="project-title">Projeto 3</h3>
+                            <p class="project-description">Em desenvolvimento.</p>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+            <div class="slider-controls">
+                <button class="slider-btn" id="prev-btn" aria-label="Slide anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="slide-counter">
+                    <span id="current-slide">1</span> / <span id="total-slides">3</span>
                 </div>
                 
-                <!-- Projeto 2 -->
-                <div class="project-card" id="project-2">
-                    <div class="project-image-col">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Data Analytics Dashboard" class="project-image">
-                        <div class="image-gradient"></div>
-                    </div>
-                    <div class="project-content-col">
-                        <h3 class="project-title">Projeto 2</h3>
-                        <p class="project-description">Em desenvolvimento.</p>
-                        <a href="#" class="project-link" target="_blank">Ver Projeto</a>
-                    </div>
+                <div class="slider-dots" id="slider-dots">
+                    <!-- Os dots serão gerados pelo JavaScript -->
                 </div>
                 
-                <!-- Projeto 3 -->
-                <div class="project-card" id="project-3">
-                    <div class="project-image-col">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Mobile Fitness App" class="project-image">
-                        <div class="image-gradient"></div>
-                    </div>
-                    <div class="project-content-col">
-                        <h3 class="project-title">Projeto 3</h3>
-                        <p class="project-description">Em desenvolvimento.</p>
-                        <a href="#" class="project-link" target="_blank">Ver Projeto</a>
-                    </div>
-                </div>
+                <button class="slider-btn" id="next-btn" aria-label="Próximo slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-        </div>        
-        <div class="slider-controls">
-            <button class="slider-btn" id="prev-btn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            
-            <div class="slide-counter">
-                <span id="current-slide">1</span> / <span id="total-slides">3</span>
-            </div>
-            
-            <div class="slider-dots" id="slider-dots">
-                <!-- Os dots serão gerados pelo JavaScript -->
-            </div>
-            
-            <button class="slider-btn" id="next-btn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
+        </section>
 
-    <section id="experiencia-profissional">
+        <!-- Seção Experiência Profissional -->
+        <section id="experiencia-profissional">
             <h2>Experiência Profissional</h2>
             
             <div class="timeline">
@@ -278,125 +287,149 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <section class="container academic-section">
-        <div class="academic-container">
-            <h2 class="academic-title">Formação Acadêmica</h2>
+        <!-- Seção Formação Acadêmica -->
+        <section class="container academic-section" id="formacao">
+            <div class="academic-container">
+                <h2 class="academic-title">Formação Acadêmica</h2>
+                
+                <div class="academic-cards">
+                    <!-- Card 1 -->
+                    <div class="academic-card">
+                        <h3 class="academic-institution">Universidade Estácio de Sá</h3>
+                        <p class="academic-course">Bacharelado em Engenharia de Software</p>
+                        <span class="academic-period">2024 - 2028</span>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="academic-card">
+                        <h3 class="academic-institution">Fundação Bradesco</h3>
+                        <p class="academic-course">Ensino Médio - Intinerário de Qualificação</p>
+                        <span class="academic-period">2021 - 2023</span>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="academic-card">
+                        <h3 class="academic-institution">Fundação Bradesco</h3>
+                        <p class="academic-course">Anos Iniciais e Ensino Fundamental I e II</p>
+                        <span class="academic-period">2011 - 2020</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section class="contact-section" id="contato">
+            <h2 class="contact-me-title">CONTATO</h2>
+            <p class="contact-me-subtitle">Entre em contato comigo através do formulário abaixo ou usando as informações de contato fornecidas. Responderei o mais breve possível.</p>
             
-            <div class="academic-cards">
-                <!-- Card 1 -->
-                <div class="academic-card">
-                    <h3 class="academic-institution">Universidade Estácio de Sá</h3>
-                    <p class="academic-course">Bacharelado em Engenharia de Software</p>
-                    <span class="academic-period">2024 - 2028</span>
+            <div class="contact-me-container">
+                <div class="contact-me-info">
+                    <div class="contact-me-card">
+                        <div class="contact-me-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-me-details">
+                            <h3>Localização</h3>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-me-card">
+                        <div class="contact-me-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-me-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:devgutz.contato@gmail.com">devgutz.contato@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-me-card">
+                        <div class="contact-me-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-me-details">
+                            <h3>Telefone</h3>
+                            <p><a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-me-social">
+                        <a href="https://www.linkedin.com/in/devgutz" class="contact-me-social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/devgutz" class="contact-me-social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="contact-me-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="contact-me-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Card 2 -->
-                <div class="academic-card">
-                    <h3 class="academic-institution">Fundação Bradesco</h3>
-                    <p class="academic-course">Ensino Médio - Intinerário de Qualificação</p>
-                    <span class="academic-period">2021 - 2023</span>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="academic-card">
-                    <h3 class="academic-institution">Fundação Bradesco</h3>
-                    <p class="academic-course">Anos Iniciais e Ensino Fundamental I e II</p>
-                    <span class="academic-period">2011 - 2020</span>
+                <div class="contact-me-form">
+                    <form id="contact-me-form" action="https://formspree.io/f/mrelvobj" method="POST">
+                        <div class="contact-me-form-group">
+                            <label for="contact-me-name" class="contact-me-label">Nome Completo</label>
+                            <input type="text" id="contact-me-name" name="name" class="contact-me-input" placeholder="Digite seu nome" required>
+                        </div>
+                        
+                        <div class="contact-me-form-group">
+                            <label for="contact-me-email" class="contact-me-label">Email</label>
+                            <input type="email" id="contact-me-email" name="email" class="contact-me-input" placeholder="seu.email@exemplo.com" required>
+                        </div>
+                        
+                        <div class="contact-me-form-group">
+                            <label for="contact-me-subject" class="contact-me-label">Assunto</label>
+                            <input type="text" id="contact-me-subject" name="subject" class="contact-me-input" placeholder="Assunto da mensagem" required>
+                        </div>
+                        
+                        <div class="contact-me-form-group">
+                            <label for="contact-me-message" class="contact-me-label">Mensagem</label>
+                            <textarea id="contact-me-message" name="message" class="contact-me-textarea" placeholder="Digite sua mensagem aqui..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="contact-me-button">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                        
+                        <div id="contact-me-status" class="contact-me-message"></div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="contact-section">
-        <h2 class="contact-me-title">CONTATO</h2>
-        <p class="contact-me-subtitle">Entre em contato comigo através do formulário abaixo ou usando as informações de contato fornecidas. Responderei o mais breve possível.</p>
-        
-        <div class="contact-me-container">
-            <div class="contact-me-info">
-                <div class="contact-me-card">
-                    <div class="contact-me-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-me-details">
-                        <h3>Localização</h3>
-                        <p>São Paulo, Brasil</p>
-                    </div>
-                </div>
-                
-                <div class="contact-me-card">
-                    <div class="contact-me-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-me-details">
-                        <h3>Email</h3>
-                        <p><a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
-                    </div>
-                </div>
-                
-                <div class="contact-me-card">
-                    <div class="contact-me-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-me-details">
-                        <h3>Telefone</h3>
-                        <p><a href="tel:+5511999999999">(11) 99999-9999</a></p>
-                    </div>
-                </div>
-                
-                <div class="contact-me-social">
-                    <a href="#" class="contact-me-social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="contact-me-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="contact-me-social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="contact-me-social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="contact-me-form">
-                <form id="contact-me-form" action="https://formspree.io/f/mrelvobj" method="POST">
-                    <div class="contact-me-form-group">
-                        <label for="contact-me-name" class="contact-me-label">Nome Completo</label>
-                        <input type="text" id="contact-me-name" name="name" class="contact-me-input" placeholder="Digite seu nome" required>
-                    </div>
-                    
-                    <div class="contact-me-form-group">
-                        <label for="contact-me-email" class="contact-me-label">Email</label>
-                        <input type="email" id="contact-me-email" name="email" class="contact-me-input" placeholder="seu.email@exemplo.com" required>
-                    </div>
-                    
-                    <div class="contact-me-form-group">
-                        <label for="contact-me-subject" class="contact-me-label">Assunto</label>
-                        <input type="text" id="contact-me-subject" name="subject" class="contact-me-input" placeholder="Assunto da mensagem" required>
-                    </div>
-                    
-                    <div class="contact-me-form-group">
-                        <label for="contact-me-message" class="contact-me-label">Mensagem</label>
-                        <textarea id="contact-me-message" name="message" class="contact-me-textarea" placeholder="Digite sua mensagem aqui..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="contact-me-button">
-                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                    </button>
-                    
-                    <div id="contact-me-message" class="contact-me-message"></div>
-                </form>
-            </div>
-        </div>
-
+        </section>
     </main>
 
     <footer>
-        <!-- Rodapé -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/logo-devgutz.png" alt="DevGutz Logo" width="150">
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Gustavo Rodrigues - DevGutz. Todos os direitos reservados.</p>
+                    <p>Desenvolvido com ❤️ e ☕</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/devgutz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/devgutz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:devgutz.contato@gmail.com" aria-label="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="assets\js\app.js"></script>
+    
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
