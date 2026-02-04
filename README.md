@@ -4,6 +4,8 @@
 
 Este portfólio é uma aplicação web moderna e responsiva desenvolvida para apresentar o perfil profissional de **Gustavo Rodrigues (DevGutz)**. O projeto combina design elegante, interatividade avançada e performance otimizada para criar uma experiência memorável para visitantes, recrutadores e potenciais clientes.
 
+https://devgutz.github.io/Portfolio/
+
 ---
 
 ## 🎯 Objetivos do Projeto
@@ -239,36 +241,6 @@ portfolio-devgutz/
 - **Intersection Observer API:** Animações scroll
 - **Fetch API:** Envio de formulário
 - **CSS Custom Properties:** Variáveis para temas
-
----
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-- Navegador moderno (Chrome 90+, Firefox 88+, Safari 14+)
-- Servidor web local (opcional, para desenvolvimento)
-
-### Instalação Local
-```bash
-# 1. Clone ou baixe os arquivos
-git clone [url-do-repositorio]
-
-# 2. Navegue para a pasta
-cd portfolio-devgutz
-
-# 3. Abra em um servidor local
-# Usando Python:
-python -m http.server 8000
-
-# Ou simplesmente abra o index.html no navegador
-```
-
-### 🌐 Deploy Online
-O projeto é estático e pode ser hospedado em:
-- GitHub Pages
-- Netlify
-- Vercel
-- Qualquer serviço de hosting estático
 
 ---
 
