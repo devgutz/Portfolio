@@ -206,14 +206,6 @@ function initSkillsSlider() {
         },
         {
             id: 5,
-            name: "Área de Dados",
-            description: "Análise e processamento de dados para extrair insights valiosos e suportar decisões estratégicas.",
-            longDescription: "Ofereço soluções em análise de dados, desde dashboards estratégicos até a construção de relatórios automatizados. Utilizo as melhores práticas de engenharia e análise de dados para garantir qualidade, confiabilidade e clareza nas entregas. Meu processo envolve entendimento do problema de negócio, coleta e preparação dos dados, análise exploratória e comunicação clara dos insights através de visualizações e relatórios. *Estou em transição para esta área em constante aprendizado.*",
-            image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            tags: ["Python", "SQL", "Análise Exploratória", "Visualização"]
-        },
-        {
-            id: 6,
             name: "Controle de Versão",
             description: "Gerenciamento de código-fonte e colaboração em equipe com ferramentas de versionamento.",
             longDescription: "Implemento e gerenciamento de fluxos de trabalho com Git para controle de versão de código, facilitando a colaboração em equipe, revisão de código e deploy contínuo. Trabalho com boas práticas de versionamento como Git Flow, commit semântico e pull requests estruturados para garantir qualidade e rastreabilidade do código.",
