@@ -1,434 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Dev Gutz - Página Inicial</title>
-    
-    <!-- Meta tags para SEO -->
-    <meta name="description" content="Portfólio de Gustavo Rodrigues - Desenvolvedor Web e Profissional de TI">
-    <meta name="keywords" content="desenvolvedor, portfolio, HTML, CSS, JavaScript, suporte técnico">
-    <meta name="author" content="Gustavo Rodrigues">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-    
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b22">
+  <title>Gustavo Rodrigues — Desenvolvimento web & TI</title>
+  <meta name="description" content="Conheça os projetos de Gustavo Rodrigues: desenvolvimento web, experiências digitais e suporte de TI. De Jandira, São Paulo, da ideia à entrega.">
+  <meta name="author" content="Gustavo Antonio Rodrigues">
+  <link rel="canonical" href="https://devgutz.github.io/Portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gustavo Rodrigues — Ideias que ganham vida.">
+  <meta property="og:description" content="Projetos reais, escolhas de desenvolvimento e experiência em suporte de TI.">
+  <meta property="og:url" content="https://devgutz.github.io/Portfolio/">
+  <meta property="og:image" content="https://devgutz.github.io/Portfolio/assets/img/image-gutz.jpeg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
 </head>
 <body>
-    <header class="main-head">
-        <div class="container">
-            <div class="main-menu">
-                <div class="logo">
-                    <img src="assets/img/logo-devgutz.png" alt="DevGutz Logo">
-                </div>
-                <nav aria-label="Menu principal" class="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-list-item">
-                            <a href="#inicio" class="nav-link">Início</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#about-me" class="nav-link">Sobre Mim</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#skills-and-services" class="nav-link">Habilidades e Serviços</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#projects" class="nav-link">Projetos</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#experiencia-profissional" class="nav-link">Experiência</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#formacao" class="nav-link">Formação</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="#contato" class="nav-link">Contato</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="toggle-btn">
-                    <button class="hamburger-btn" id="menuToggle" aria-label="Menu mobile">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                </div>
-            </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="wordmark" href="#inicio" aria-label="Gustavo Rodrigues, início"><span class="monogram">gr<span>↗</span></span><span>Gustavo<br><strong>Rodrigues.</strong></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="navigation" aria-label="Navegação principal"><a href="#projects">Projetos</a><a href="#sobre">Sobre mim</a><a href="#experiencia-profissional">Trajetória</a><a class="nav-contact" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <main id="conteudo">
+    <section class="hero shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">✳</span> DESENVOLVIMENTO WEB & TI</p>
+        <h1 id="hero-title">Ideias que<br>ganham <em>vida.</em></h1>
+        <p class="hero-intro">Sou <strong>Gustavo Rodrigues</strong>. Conecto desenvolvimento, design e experiência em suporte para transformar necessidades reais em soluções digitais.</p>
+        <div class="actions"><a class="button primary" href="#projects">Explore meu trabalho <span aria-hidden="true">↘</span></a><a class="text-link" href="#experiencia-profissional">Conheça minha trajetória <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-foot"><span>Jandira, São Paulo · Brasil</span><span>ENGENHARIA DE SOFTWARE <span class="blue-dot" aria-hidden="true"></span></span></div>
+      </div>
+      <div class="portrait-composition">
+        <div class="portrait-coordinate" aria-hidden="true">PESSOAS + TECNOLOGIA</div>
+        <figure class="portrait"><img src="assets/img/image-gutz.jpeg" alt="Gustavo Rodrigues, desenvolvedor web e profissional de suporte de TI" width="729" height="1296" fetchpriority="high"><figcaption>Prazer, Gustavo.<span>Desenvolvedor. Criador. Sempre aprendendo.</span></figcaption></figure>
+        <div class="portrait-note"><span class="note-symbol" aria-hidden="true">↗</span><span>Da primeira ideia<br><strong>à experiência de verdade.</strong></span></div>
+        <span class="portrait-index" aria-hidden="true">01 / EM CONSTRUÇÃO CONTÍNUA</span>
+      </div>
+    </section>
+    <div class="intro-strip"><div class="shell strip-inner"><p>Um olhar criativo.<br><strong>Uma base técnica.</strong></p><p>Sites que apresentam.<br>Interfaces que orientam.<br>Tecnologia que resolve.</p><a href="https://github.com/devgutz" target="_blank" rel="noopener noreferrer">Conheça meu GitHub <span aria-hidden="true">↗</span></a></div></div>
+
+    <section class="work-section shell" id="projects" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">01 — PROJETOS SELECIONADOS</p><h2 id="work-title">Menos abstração.<br><em>Mais projeto real.</em></h2></div><p>Cada projeto começa com uma necessidade.<br>Veja o contexto, as decisões e o que foi construído.</p></div>
+      <article class="featured-project">
+        <div class="ecosystem-visual" aria-label="Esquema do portal que conecta as cinco marcas de Gustavo Rodrigues">
+          <div class="visual-toolbar"><span class="window-dots" aria-hidden="true">● ● ●</span><span>gustavoarodrigues.com.br</span><span aria-hidden="true">↗</span></div>
+          <div class="ecosystem-title"><span>UM UNIVERSO DE POSSIBILIDADES</span><p>Uma pessoa.<br><em>Cinco caminhos.</em></p></div>
+          <div class="brand-map"><span class="map-tech">Tech SP <small>DESKTOPS</small></span><span class="map-studio">3D Studio <small>IMPRESSÃO 3D</small></span><span class="map-doces">Casa Rodrigues <small>DOCES ARTESANAIS</small></span><span class="map-dev">DevGutz <small>DESENVOLVIMENTO</small></span><span class="map-gutz">GUTZ <small>GAMES & CONTEÚDO</small></span></div>
+          <p class="visual-caption">Esquema de navegação do projeto</p>
         </div>
-    </header>
+        <div class="featured-copy"><p class="project-meta">PROJETO PRÓPRIO · PORTAL MULTIMARCA</p><h3>Universo Rodrigues</h3><p>Organizar negócios diferentes em um só endereço, preservando a personalidade de cada um e ajudando o visitante a encontrar o que procura.</p><ul class="tags" aria-label="Áreas do projeto"><li>Desenvolvimento web</li><li>Organização de conteúdo</li><li>Identidade</li></ul><a class="text-link" href="https://gustavoarodrigues.com.br/" target="_blank" rel="noopener noreferrer">Explorar o portal <span aria-hidden="true">↗</span></a><details class="case-details"><summary>Por dentro do projeto <span aria-hidden="true">+</span></summary><dl><dt>O desafio</dt><dd>Apresentar desktops, impressão 3D, doces, desenvolvimento e games sem confundir as ofertas.</dd><dt>A abordagem</dt><dd>Um portal central e páginas próprias para cada marca, com conteúdo e caminhos de contato específicos.</dd><dt>A entrega</dt><dd>Um endereço que conecta os cinco universos, a apresentação pessoal e os canais de atendimento.</dd></dl></details></div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card"><a class="project-image tech-image" href="https://gustavoarodrigues.com.br/marcas/tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site atual da Rodrigues Tech SP"><img src="assets/img/project-1-image.png" width="1902" height="1079" alt="Registro de uma versão anterior do site Rodrigues Tech SP" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></a><p class="image-note">Registro de versão anterior · o link abre o site atual.</p><div class="project-card-body"><p class="project-meta">PROJETO PRÓPRIO · SERVIÇOS LOCAIS</p><h3>Rodrigues Tech SP</h3><p>Uma apresentação de serviços de desktop que orienta o cliente do problema ao pedido de orçamento.</p><ul class="tags"><li>Site institucional</li><li>Serviços</li><li>Contato</li></ul><details class="case-details"><summary>Por dentro do projeto <span aria-hidden="true">+</span></summary><dl><dt>O desafio</dt><dd>Explicar os serviços e a área de atendimento antes da conversa com o cliente.</dd><dt>A abordagem</dt><dd>Separar montagem, manutenção e upgrades; apresentar as etapas do atendimento e as dúvidas frequentes.</dd><dt>A entrega</dt><dd>Site com escopo de desktops, atendimento em Jandira e região e caminhos para solicitar orçamento.</dd></dl></details></div></article>
+        <article class="project-card"><a class="project-image studio-image" href="https://gustavoarodrigues.com.br/marcas/studio/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site atual da Rodrigues 3D Studio"><img src="assets/img/project-2-image.png" width="1900" height="1079" alt="Registro de uma versão anterior do site Rodrigues 3D Studio" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></a><p class="image-note">Registro de versão anterior · o link abre o site atual.</p><div class="project-card-body"><p class="project-meta">PROJETO PRÓPRIO · PRODUTOS PERSONALIZADOS</p><h3>Rodrigues 3D Studio</h3><p>Um ponto de partida para explorar possibilidades de impressão 3D e explicar uma ideia personalizada.</p><ul class="tags"><li>Catálogo</li><li>Personalização</li><li>Jornada de orçamento</li></ul><details class="case-details"><summary>Por dentro do projeto <span aria-hidden="true">+</span></summary><dl><dt>O desafio</dt><dd>Apresentar peças de finalidades diferentes e receber referências para projetos sob demanda.</dd><dt>A abordagem</dt><dd>Organizar possibilidades por categoria e explicar a conversa sobre medidas, materiais e acabamento.</dd><dt>A entrega</dt><dd>Site com catálogo de categorias e apresentação das etapas de personalização e produção.</dd></dl></details></div></article>
+      </div>
+      <div class="project-outro"><span class="tiny-cross" aria-hidden="true">✳</span><p>São projetos das minhas próprias marcas.<br><strong>Uma forma de aplicar, testar e evoluir o que construo.</strong></p><a class="text-link" href="https://github.com/devgutz" target="_blank" rel="noopener noreferrer">Ver repositórios <span aria-hidden="true">↗</span></a></div>
+    </section>
 
-    <main>
-        <!-- Seção Sobre Mim -->
-        <section class="container about-container" id="inicio">
-            <div class="photo-column">
-                <div class="photo-frame">
-                    <img src="assets/img/image-gutz.jpeg" alt="Gustavo Rodrigues - Desenvolvedor">
-                </div>
-            </div>
-            <div class="info-column">
-                <h1 class="greeting">Sou o <span class="name-highlight">Gustavo Rodrigues</span>,</h1>
-                
-                <div class="typewriter-container">
-                    <span id="typewriter" class="typewriter-text"></span>
-                </div>
-                <p class="about-text">
-                    Sou desenvolvedor em constante evolução, apaixonado por tecnologia, inovação e resolução de problemas. Tenho experiência em desenvolvimento web, lógica de programação e suporte em TI, sempre focado em aprender, evoluir e entregar soluções eficientes. Atualmente migrando para área de dados.
-                </p>
-                
-                <div class="profession-tags">
-                    <span class="tag">Desenvolvimento Web</span>
-                    <span class="tag">Suporte Técnico</span>
-                    <span class="tag">Gerenciamento De Equipes</span>
-                    <span class="tag">UI/UX</span>
-                    <span class="tag">Análise de Dados</span>
-                </div>
-                
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/devgutz" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/devgutz" title="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:devgutz.contato@gmail.com" title="E-mail">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <section class="about-section" id="sobre" aria-labelledby="about-title"><div class="shell about-layout"><div><p class="eyebrow">02 — POR TRÁS DOS PROJETOS</p><h2 id="about-title">Antes do código,<br><em>entender as pessoas.</em></h2><p class="about-statement">O suporte de TI me coloca perto de quem usa a tecnologia. O desenvolvimento me permite construir o que vem depois.</p><p>Sou Gustavo Antonio Rodrigues, de Jandira, São Paulo. Trabalho com suporte técnico na Prefeitura de Jandira e curso Engenharia de Software. Também desenvolvo sites e projetos próprios pela DevGutz.</p><p>Meu interesse está no encontro entre uma boa apresentação, uma navegação clara e uma solução que faça sentido para quem está do outro lado da tela.</p><a class="text-link" href="https://www.linkedin.com/in/devgutz" target="_blank" rel="noopener noreferrer">Minha trajetória no LinkedIn <span aria-hidden="true">↗</span></a></div><div class="practice-list"><p class="eyebrow">COMO ISSO APARECE NA PRÁTICA</p><article><span>01</span><div><h3>Desenvolvimento web</h3><p>HTML, CSS e JavaScript aplicados a sites institucionais, portfólios e páginas de apresentação.</p></div></article><article><span>02</span><div><h3>Suporte & infraestrutura</h3><p>Atendimento a usuários, diagnóstico, manutenção de computadores, sistemas e conectividade.</p></div></article><article><span>03</span><div><h3>Design & conteúdo</h3><p>Organização de informação, hierarquia visual e interfaces que deixam o próximo passo claro.</p></div></article><div class="toolbelt"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git & GitHub</span><span>UI/UX</span><span>Help desk</span></div></div></div></section>
 
-        <!-- Seção Habilidades e Serviços -->
-        <section id="skills-and-services" class="skills-section-container">
-            <div class="skills-section-title">
-                <h2>Habilidades & Serviços</h2>
-                <p>Confira os principais serviços que ofereço e as tecnologias utilizadas em cada um deles. Clique em qualquer card para obter mais detalhes.</p>
-            </div>
-            
-            <div class="skills-slider-container">
-                <div class="skills-slider-track" id="skillsSliderTrack">
-                    <!-- Cards serão gerados via JavaScript -->
-                </div>
-                
-                <div class="skills-slider-controls">
-                    <button class="skills-slider-btn" id="skillsPrevBtn" aria-label="Slide anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    
-                    <div class="skills-slider-dots" id="skillsSliderDots">
-                        <!-- Os dots serão gerados via JavaScript -->
-                    </div>
-                    
-                    <button class="skills-slider-btn" id="skillsNextBtn" aria-label="Próximo slide">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Modal para visualização detalhada -->
-        <div class="skill-modal-overlay" id="skillModalOverlay">
-            <div class="skill-modal-content">
-                <button class="skill-modal-close" id="skillModalClose" aria-label="Fechar modal">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="skill-modal-body" id="skillModalBody">
-                    <!-- Conteúdo do modal será preenchido via JavaScript -->
-                </div>
-            </div>
-        </div>
+    <section class="shell journey-section" id="experiencia-profissional" aria-labelledby="journey-title"><div class="section-heading"><div><p class="eyebrow">03 — TRAJETÓRIA</p><h2 id="journey-title">Aprender fazendo.<br><em>E seguir construindo.</em></h2></div><a class="text-link" href="https://www.linkedin.com/in/devgutz" target="_blank" rel="noopener noreferrer">Perfil profissional <span aria-hidden="true">↗</span></a></div><div class="journey-layout"><div class="timeline"><article><span class="timeline-date">JUL 2025 — ATUAL</span><div><p class="project-meta">PREFEITURA DE JANDIRA</p><h3>Estágio em suporte técnico</h3><p>Help desk presencial e remoto, acompanhamento de chamados e suporte a hardware, software, redes e periféricos. Vivência com manutenção, documentação e orientação de usuários.</p></div></article><article><span class="timeline-date">FEV — JUN 2025</span><div><p class="project-meta">PREFEITURA DE JANDIRA</p><h3>Estágio administrativo e de comunicação</h3><p>Planilhas, relatórios, documentos e produção de materiais visuais. Organização de informação para apoiar o trabalho das equipes.</p></div></article><article><span class="timeline-date">NOV 2024</span><div><p class="project-meta">ARCOS DOURADOS · MCDONALD’S</p><h3>Atendimento ao cliente</h3><p>Experiência em atendimento, rotina operacional e trabalho em equipe.</p></div></article></div><aside class="education" id="formacao"><span class="education-symbol" aria-hidden="true">↗</span><p class="eyebrow">FORMAÇÃO EM ANDAMENTO</p><h3>Engenharia<br>de Software</h3><p>Universidade Estácio de Sá</p><p class="education-period">2024 — 2028 <span>Conclusão prevista</span></p><hr><p class="project-meta">FUNDAÇÃO BRADESCO</p><p>Ensino Médio com itinerário de qualificação<br><span class="muted">2021 — 2023</span></p></aside></div></section>
 
-        <!-- Seção Projetos -->
-        <section class="container projects-section" id="projects">
-            <h2 class="projects-title">Projetos & Trabalhos</h2>
-            <p class="projects-description">Confira alguns dos projetos que desenvolvi, combinando tecnologia, design e funcionalidade para criar soluções inovadoras.</p>
-            
-            <div class="projects-slider">
-                <div class="slider-container">
-                    <!-- Projeto 1 -->
-                    <div class="project-card" id="project-1">
-                        <div class="project-image-col">
-                            <img src="assets/img/project-1-image.png" alt="E-commerce Platform" class="project-image">
-                            <div class="image-gradient"></div>
-                        </div>
-                        <div class="project-content-col">
-                            <h3 class="project-title">Assistência Técnica RodriguesTechSP</h3>
-                            <p class="project-description">Concluído</p>
-                            <a href="https://devgutz.github.io/rodriguestechsp/" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 2 -->
-                    <div class="project-card" id="project-2">
-                        <div class="project-image-col">
-                            <img src="assets/img/project-2-image.png" alt="Data Analytics Dashboard" class="project-image">
-                            <div class="image-gradient"></div>
-                        </div>
-                        <div class="project-content-col">
-                            <h3 class="project-title">Rodrigues 3d Studio</h3>
-                            <p class="project-description">Concluído</p>
-                            <a href="https://devgutz.github.io/Rodrigues3DStudio/" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 3 -->
-                    <div class="project-card" id="project-3">
-                        <div class="project-image-col">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Mobile Fitness App" class="project-image">
-                            <div class="image-gradient"></div>
-                        </div>
-                        <div class="project-content-col">
-                            <h3 class="project-title">Projeto 3</h3>
-                            <p class="project-description">Em desenvolvimento.</p>
-                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>        
-            <div class="slider-controls">
-                <button class="slider-btn" id="prev-btn" aria-label="Slide anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                
-                <div class="slide-counter">
-                    <span id="current-slide">1</span> / <span id="total-slides">3</span>
-                </div>
-                
-                <div class="slider-dots" id="slider-dots">
-                    <!-- Os dots serão gerados pelo JavaScript -->
-                </div>
-                
-                <button class="slider-btn" id="next-btn" aria-label="Próximo slide">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </section>
-
-        <!-- Seção Experiência Profissional -->
-        <section id="experiencia-profissional">
-            <h2>Experiência Profissional</h2>
-            
-            <div class="timeline">
-                <!-- Experiência 1 -->
-                <div class="experiencia-container experiencia-left">
-                    <div class="experiencia-content">
-                        <div class="empresa-info">
-                            <h3 class="empresa-nome">Prefeitura de Jandira</h3>
-                            <div class="empresa-cargo">
-                                <i class="fas fa-headphones"></i> 
-                                Estagiário de Suporte Técnico
-                            </div>
-                        </div>
-                        <div class="atividades">
-                            <ul>
-                                <li>Atuação em Suporte Técnico (Help Desk) presencial e remoto</li>
-                                <li>Abertura, triagem e acompanhamento de chamados (SLA)</li>
-                                <li>Suporte a hardware, software e redes</li>
-                                <li>Instalação, configuração e manutenção de sistemas e aplicativos (Office/M365)</li>
-                                <li>Formatação, padronização de máquinas, backup e restauração</li>
-                                <li>Suporte a impressoras, periféricos, Wi-Fi e conectividade</li>
-                                <li>Administração básica de Active Directory e controle de acessos</li>
-                                <li>Manutenção preventiva/corretiva, inventário de ativos e documentação</li>
-                                <li>Orientação e treinamento de usuários</li>
-                            </ul>
-                        </div>
-                        <div class="experiencia-data">07/2025 - 02/2026 e 02/2026 - 02/2027</div>
-                    </div>
-                </div>
-                
-                <!-- Experiência 2 -->
-                <div class="experiencia-container experiencia-right">
-                    <div class="experiencia-content">
-                        <div class="empresa-info">
-                            <h3 class="empresa-nome">Prefeitura de Jandira</h3>
-                            <div class="empresa-cargo">
-                                <i class="fas fa-briefcase"></i> Estagiário Administrativo e de Comunicação
-                            </div>
-                        </div>
-                        <div class="atividades">
-                            <ul>
-                                <li>Elaboração e atualização de planilhas com gráficos e demonstrativos de beneficiários</li>
-                                <li>Produção de relatórios institucionais e administrativos</li>
-                                <li>Acompanhamento de visitas técnicas com registro audiovisual</li>
-                                <li>Edição de imagens e vídeos para composição de relatórios</li>
-                                <li>Criação de materiais gráficos (convites, certificados, avisos)</li>
-                                <li>Atualização e revisão de documentos oficiais </li>
-                                <li>Elaboração de organogramas institucionais e organizacionais</li>
-                            </ul>
-                        </div>
-                        <div class="experiencia-data">02/2025 - 06/2025</div>
-                    </div>
-                </div>
-                
-                <!-- Experiência 3 -->
-                <div class="experiencia-container experiencia-left">
-                    <div class="experiencia-content">
-                        <div class="empresa-info">
-                            <h3 class="empresa-nome">Arcos Dourados Comércio de Alimentos LTDA - MC Donald's</h3>
-                            <div class="empresa-cargo">
-                                <i class="fas fa-male"></i> Atendente de Lanchonete
-                            </div>
-                        </div>
-                        <div class="atividades">
-                            <ul>
-                                <li>Atendimento ao cliente</li>
-                                <li>Manipulação de alimentos</li>
-                                <li>Limpeza</li>
-                            </ul>
-                        </div>
-                        <div class="experiencia-data">11/2024 - 11/2024</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Formação Acadêmica -->
-        <section class="container academic-section" id="formacao">
-            <div class="academic-container">
-                <h2 class="academic-title">Formação Acadêmica</h2>
-                
-                <div class="academic-cards">
-                    <!-- Card 1 -->
-                    <div class="academic-card">
-                        <h3 class="academic-institution">Universidade Estácio de Sá</h3>
-                        <p class="academic-course">Bacharelado em Engenharia de Software</p>
-                        <span class="academic-period">2024 - 2028</span>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="academic-card">
-                        <h3 class="academic-institution">Fundação Bradesco</h3>
-                        <p class="academic-course">Ensino Médio - Intinerário de Qualificação</p>
-                        <span class="academic-period">2021 - 2023</span>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="academic-card">
-                        <h3 class="academic-institution">Fundação Bradesco</h3>
-                        <p class="academic-course">Anos Iniciais e Ensino Fundamental I e II</p>
-                        <span class="academic-period">2011 - 2020</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-        <section class="contact-section" id="contato">
-            <h2 class="contact-me-title">CONTATO</h2>
-            <p class="contact-me-subtitle">Entre em contato comigo através do formulário abaixo ou usando as informações de contato fornecidas. Responderei o mais breve possível.</p>
-            
-            <div class="contact-me-container">
-                <div class="contact-me-info">
-                    <div class="contact-me-card">
-                        <div class="contact-me-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-me-details">
-                            <h3>Localização</h3>
-                            <p>São Paulo, Brasil</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-me-card">
-                        <div class="contact-me-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-me-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:devgutz.contato@gmail.com">devgutz.contato@gmail.com</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-me-card">
-                        <div class="contact-me-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-me-details">
-                            <h3>Telefone</h3>
-                            <p><a href="tel:+5511999999999">(11) 94173-5107</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-me-social">
-                        <a href="https://www.linkedin.com/in/devgutz" class="contact-me-social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/devgutz" class="contact-me-social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="contact-me-social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="contact-me-social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-me-form">
-                    <form id="contact-me-form" action="https://formspree.io/f/mrelvobj" method="POST">
-                        <div class="contact-me-form-group">
-                            <label for="contact-me-name" class="contact-me-label">Nome Completo</label>
-                            <input type="text" id="contact-me-name" name="name" class="contact-me-input" placeholder="Digite seu nome" required>
-                        </div>
-                        
-                        <div class="contact-me-form-group">
-                            <label for="contact-me-email" class="contact-me-label">Email</label>
-                            <input type="email" id="contact-me-email" name="email" class="contact-me-input" placeholder="seu.email@exemplo.com" required>
-                        </div>
-                        
-                        <div class="contact-me-form-group">
-                            <label for="contact-me-subject" class="contact-me-label">Assunto</label>
-                            <input type="text" id="contact-me-subject" name="subject" class="contact-me-input" placeholder="Assunto da mensagem" required>
-                        </div>
-                        
-                        <div class="contact-me-form-group">
-                            <label for="contact-me-message" class="contact-me-label">Mensagem</label>
-                            <textarea id="contact-me-message" name="message" class="contact-me-textarea" placeholder="Digite sua mensagem aqui..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="contact-me-button">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                        </button>
-                        
-                        <div id="contact-me-status" class="contact-me-message"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/img/logo-devgutz.png" alt="DevGutz Logo" width="150">
-                </div>
-                <div class="footer-info">
-                    <p>&copy; 2024 Gustavo Rodrigues - DevGutz. Todos os direitos reservados.</p>
-                    <p>Desenvolvido com ❤️ e ☕</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/devgutz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/devgutz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:devgutz.contato@gmail.com" aria-label="Email">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="assets/js/app.js"></script>
+    <section class="contact-section" id="contato" aria-labelledby="contact-title"><div class="shell contact-layout"><div><p class="eyebrow">04 — PRÓXIMA CONVERSA</p><h2 id="contact-title">O próximo projeto<br>pode começar<br><em>por aqui.</em></h2><p>Tem uma ideia de site ou uma oportunidade em tecnologia? Conte o contexto e o que você precisa construir.</p><a class="contact-email" href="mailto:devgutz.contato@gmail.com">devgutz.contato@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://wa.me/5511941735107" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="https://www.linkedin.com/in/devgutz" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/devgutz" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><form id="contact-form" action="https://formspree.io/f/mrelvobj" method="post"><div class="form-row"><label for="name">Seu nome<input id="name" name="name" autocomplete="name" maxlength="120" required placeholder="Como posso chamar você?"></label><label for="email">Seu e-mail<input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="voce@exemplo.com"></label></div><label for="subject">Sobre o que vamos conversar?<select id="subject" name="subject" required><option value="">Selecione uma opção</option><option>Quero um site para meu negócio</option><option>Tenho uma oportunidade em tecnologia</option><option>Quero conversar sobre um projeto</option></select></label><label for="message">Conte sua ideia<textarea id="message" name="message" rows="4" maxlength="5000" required placeholder="Seu objetivo, o que você imagina e como posso ajudar."></textarea></label><p class="form-privacy">Seus dados serão usados para responder à sua mensagem. <a href="https://gustavoarodrigues.com.br/legal/privacidade" target="_blank" rel="noopener noreferrer">Política de privacidade ↗</a></p><button class="button contact-submit" type="submit">Enviar mensagem <span aria-hidden="true">↗</span></button><p id="form-status" class="form-status" role="status" aria-live="polite"></p></form></div></section>
+  </main>
+  <footer class="shell footer"><a class="footer-name" href="#inicio">Gustavo Rodrigues<span>Da ideia à experiência.</span></a><p>© <span id="year">2026</span> · Feito com intenção.</p><a class="text-link" href="#inicio">Voltar ao início ↑</a></footer>
 </body>
 </html>
